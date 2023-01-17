@@ -341,7 +341,7 @@ fortune_500_final = pd.concat([fortune_data_1955_to_1975, fortune_data_1976_to_1
 
 #Execute this code everytime you use this approach to connect with MySQL
 pymysql.install_as_MySQLdb()   
-engine = sqlalchemy.create_engine('mysql://root:HXTKGVhxtkgv123.@localhost:3306/')
+engine = sqlalchemy.create_engine('mysql://root:***************.@localhost:****/')
 
 #Export the fortune_500_final dataframe (which contains all the fortune companies from 1955 to 2022) to MySQL database
 fortune_500_final.to_sql(con = engine, schema = "fortune_500", name = "fortune", if_exists = "append", index = False)
